@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="/update">
+    <input type="hidden" th:value="${person.id}" name = "id">
+    <input type="text" th:value="${person.first_name}" name = "first_name">
+    <input type="text" th:value="${person.last_name3}" name = "last_name">
+    <input type="submit" value="opdater Person">
+</form>
+</body>
+</html>

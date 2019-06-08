@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Personer</h2>
+<p th:each="person : ${persons}">
+    <span th:text="${person.first_name}" />
+    <span th:text="${person.last_name}" />
+    <a th:href="@{'delete/' + ${person.id}}" th:text="${person.first_name}"/>
+    <a style="color:green" th:href="@{'update/' + ${person.id}}" th:text="${person.first_name}"/>
+</p>
+<form action="/create" method="post">
+    <input type="text" name="first_name">
+    <input type="text" name="last_name">
+    <input type="submit" value="Opret Person">
+</form>
+</body>
+</html>
